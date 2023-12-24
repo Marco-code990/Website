@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake-on-LAN</title>
+</head>
+<body>
+    <button id="botonEncender">Encender Computadora</button>
+
+    <script>
+        document.getElementById("botonEncender").addEventListener("click", function() {
+            encenderComputadora();
+        });
+
+        function encenderComputadora() {
+            var macAddress = "00:1D:92:E6:6E:13"; // Dirección MAC de la computadora
+            var ipAddress = "192.168.100.169"; // Dirección IP de la computadora
+
+            // Ejecutar la función para enviar el paquete Wake-on-LAN
+            sendWakeOnLan(macAddress, ipAddress);
+        }
+
+        function sendWakeOnLan(macAddress, ipAddress) {
+            // Construir la URL para el servicio Wake-on-LAN
+            var url = "/wakeonlan?mac=" + encodeURIComponent(macAddress) + "&ip=" + encodeURIComponent(ipAddress);
+
+            // Realizar una solicitud HTTP GET al servidor
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    console.log('Wake-on-LAN enviado con éxito');
+                })
+                .catch(error => {
+                    console.error('Error al enviar Wake-on-LAN:', error);
+                });
+        }
+    </script>
+</body>
+</html>
+
