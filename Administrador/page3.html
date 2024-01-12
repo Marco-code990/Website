@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laboratorios</title>
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    </head>
+
+    <body>
+        <header class="page-header">
+            <img src="./Media/esime.png" alt="Logo_ESIME"> 
+            <div class="welcome-container">
+                <h1>Laboratorios</h1>
+            </div>
+            <div class="logout">
+                <img src="./Media/logout.png" alt="Cerrar_sesion" title="Cerrar sesión">
+            </div>
+        </header>
+
+        <div id="lab-list">
+            <div class="lab-item">
+                <h2>Laboratorio 1</h2>
+                <p>Descripción del Laboratorio 1.</p>
+                <p>Estado: Disponible</p>
+                <button class="Edit-button" onclick="cambiarEstado(1)">Cambiar Estado</button>
+            </div>
+    
+            <div class="lab-item">
+                <h2>Laboratorio 2</h2>
+                <p>Descripción del Laboratorio 2.</p>
+                <p>Estado: No Disponible</p>
+                <button class="Edit-button" onclick="cambiarEstado(2)">Cambiar Estado</button>
+            </div>
+        </div>
+    
+    </body>
+</html>
