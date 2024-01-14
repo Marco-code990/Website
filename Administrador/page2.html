@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Usuarios</title>
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    </head>
+
+    <body>
+        <header class="page-header">
+            <img src="./Media/esime.png" alt="Logo_ESIME"> 
+            <div class="welcome-container">
+                <h1>Usuarios registrados</h1>
+            </div>
+            <div class="logout">
+                <img src="./Media/logout.png" alt="Cerrar_sesion" title="Cerrar sesión">
+            </div>
+        </header>
+
+        <div class="user-list">
+            <div class="user">
+                <div class="user-info">
+                    <p><strong>Usuario:</strong> Usuario1</p>
+                    <p><strong>Correo:</strong> usuario1@example.com</p>
+                </div>
+                <div class="user-actions">
+                    <button class="delete-button" onclick="deleteUser(1)">Eliminar</button>
+                </div>
+            </div>
+    
+            <div class="user">
+                <div class="user-info">
+                    <p><strong>Usuario:</strong> Usuario2</p>
+                    <p><strong>Correo:</strong> usuario2@example.com</p>
+                </div>
+                <div class="user-actions">
+                    <button class="delete-button" onclick="deleteUser(2)">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>
